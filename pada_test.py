@@ -1,46 +1,72 @@
 import json
+from numpy import true_divide
 import pandas as pd
 
 #-- SERIES --#
 #------------#  # It is a one-dimensional array holding data of any type.
+def series_exm():
+    a = [2, 4, 6]
 
-a = [2, 4, 6]
+    myvar = pd.Series(a)
 
-myvar = pd.Series(a)
+    # print(myvar)
 
-# print(myvar)
+    a = {
+        'mal': 43,
+        'tal': 568
+    }
 
-a = {
-    'mal': 43,
-    'tal': 568
-}
+    myvar = pd.Series(a)
 
-myvar = pd.Series(a)
-
-# print(myvar)
-
-
+    print(myvar)
 
 #-- DATAFRAMES --#
 #----------------# #A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.
 
-var = {
-    'name': ['720s Spider', 'Chiron', 'gtr', 'Lembo', 'ford gt heritage edition', 'henesi venom'],
-    'value': [23, 32, 65, 75, 87, 24]
-}
+def dframe_exm():
+    var = {
+        'name': ['720s Spider', 'Chiron', 'gtr', 'Lembo', 'ford gt heritage edition', 'henesi venom'],
+        'value': [23, 32, 65, 75, 87, 24]
+    }
 
-df = pd.DataFrame(var, index = ['x','e','v','h','f', 4])
+    df = pd.DataFrame(var, index = ['x','e','v','h','f', 4])
 
-# print(df)
-# print(df.loc['x'])
+    print(df)
+    print(df.loc['x'])
 
 
 
 #-- Read data files of diff types --#
 #-----------------------------------#
 
-# csv_file = pd.read_csv('data.csv')
-# print(csv_file.to_string())
+def read_file():
+    csv_file = pd.read_csv('data/data.csv')
+    print(csv_file.to_string())
 
-json_file = pd.read_json('data.json')
-print(json_file.to_string())
+    json_file = pd.read_json('data/data.json')
+    print(json_file.to_string())
+
+
+def data_cleaning():
+    df = pd.read_csv('data/dirtydata.csv')
+
+    #remove the raw containing NULL value
+    # new_df = df.dropna()
+    # new_df.to_csv('data/cleaneddata.csv')
+    # print(new_df)
+
+    #inplace dont return anything
+    # df.fillna(130, inplace=True)
+    # print(df)
+
+    df['Calories'].fillna(34, inplace=True)
+    print(df)
+
+
+
+##----- MAIN -----##
+##----------------##
+# series_exm()
+# dframe_exm()
+# read_file()
+data_cleaning()
