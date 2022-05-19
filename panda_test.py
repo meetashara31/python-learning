@@ -59,9 +59,13 @@ def data_cleaning():
     # df.fillna(130, inplace=True)
     # print(df)
 
-    df['Calories'].fillna(34, inplace=True)
-    print(df)
+    # m = df['Calories'].mean()
+    # df['Calories'].fillna(m, inplace=True)
 
+    #Fromate
+    # df['Date'] = pd.to_datetime(df['Date'])
+    # print(df)
+    
 
 
 ##----- MAIN -----##
