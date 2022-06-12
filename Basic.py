@@ -1,4 +1,8 @@
 # Print Hello
+from this import d
+from time import process_time
+
+
 print("hello")
 
 #Multiple line comment
@@ -17,5 +21,60 @@ print(b)
 
 #Addision of variable
 print(a+b)
+
+#Print data type of variable
+x=5.2
+y="Meet"
+
+#Define Multiple string line
+J=""""hello dkjbeuifbewufiebwfewbfewbfyuewb
+efbeifbewfbew
+oifiwebfhewbkjwelewnfjkwe"""
+
+print(type(y))
+
+print(type(x))
+
+# Assigning multiple value in one line
+
+o=p=g="Off"
+k,r ="Meet","Rajeshbhai"
+
+
+print(r)
+print(o,p,g)
+
+#Unpack list method
+Ashara="Rajeshbhai","Mayur"
+R,M=Ashara
+print(R)
+print(M)
+
+#Creating function
+''' Defining Global Variableg
+'''
+global D
+
+D="Hey"
+
+def myfunc():
+    G="Global"
+    print("hello" +D)
+
+
+myfunc()
+print(g + D)
+
+#convert from one data type to another:
+a=float(1.5)
+print(a)
+print(type(a))
+
+print(type(g))
+g=int(5)
+print(type(g))
+
+import random
+print(random.randrange(1,15))
 
 
