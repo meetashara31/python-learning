@@ -1,4 +1,5 @@
 # Print Hello
+from ast import Str
 from this import d
 from time import process_time
 
@@ -88,10 +89,18 @@ f="forground"
 print(len(f))
 
 #We can check any word is present in string or not..
+str='How are you brother!'
+if "good"  not in str:
+    print("good is not present")
 
-srt='How  you!'
-if "are"  not in srt:
-    print("are is not present")
+#In Slicing string we can return range of character by specifing start index & end index
+print(str[1:15])
+print(str[1:])
+
+#print upper case and lower case of string
+print(str.lower())
+print(str.upper())
+
 
 
 
