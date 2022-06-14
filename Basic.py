@@ -3,6 +3,7 @@ from this import d
 from time import process_time
 
 
+
 print("hello")
 
 #Multiple line comment
@@ -14,6 +15,9 @@ print("hello")
 # Declare Variable
 a=5
 b=6
+
+if a<b:
+    print('a is greater the a')
 
 # Print variable
 print(a)
@@ -60,8 +64,6 @@ D="Hey"
 def myfunc():
     G="Global"
     print("hello" +D)
-
-
 myfunc()
 print(g + D)
 
@@ -76,5 +78,21 @@ print(type(g))
 
 import random
 print(random.randrange(1,15))
+
+#looping in python
+for f in "forground":
+    print(f)
+
+#Find length of string
+f="forground"
+print(len(f))
+
+#We can check any word is present in string or not..
+
+srt='How  you!'
+if "are"  not in srt:
+    print("are is not present")
+
+
 
 
